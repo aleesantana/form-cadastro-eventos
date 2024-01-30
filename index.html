@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Cadastro de Eventos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__tittle">Crie e compartilhe seu evento.</h1>
+            <p class="header__text">O primeiro passo, é preencher esse formulário de inscrição.</p>
+        </div>
+    </header>
+    <main class="main">
+        <form class="form">
+            <fieldset class="infos fieldset">
+                <h2 class="tittle">Informações do Evento</h2>
+                <!-- campo de título do evento -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Título do evento<span class="parenthesis"> (mínimo 8 caracteres)</span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite o título do evento..." required>
+                </div>
+                <!-- campo de link para o evento -->
+                <div class="camp">
+                    <label for="event__link" class="label__tittle">Link do evento<span class="parenthesis" aria-label="Link do evento">(comece com https://)</span></label>
+                    <input type="text" id="event__link" name="event__link" placeholder="Digite o link para o evento...">
+                </div>
+                <!-- WhatsApp -->
+                <div class="camp">
+                    <label for="whatsapp" class="label__tittle">Whatsapp para contato<span class="parenthesis" aria-label="Whatsapp para contato"> (somente números)</span></label>
+                    <input type="tel" id="whatsapp" name="whatsapp"  placeholder="Digite o número de WhatsApp.." required>
+                </div>
+                <!-- Extras -->
+                <div class="camp">
+                    <label for="extras" class="label__tittle">Informações extras<span class="parenthesis" aria-label="Informações extras"> (somente números)</span></label>
+                    <textarea id="extras" name="extras" rows="10"  placeholder="Digite mais informações..."></textarea>
+                </div>
+                <!-- Categoria -->
+                <div class="camp camp__select">
+                    <label for="categoria" class="label__tittle" >Categoria</label>
+                    <select name="categoria" id="categoria" aria-label="Categoria do evento">
+                        <option value="selecione" selected disabled>Tipo de evento</option>
+                        <option value="option-1">Festa de aniversário</option>
+                        <option value="option-2">Festa de formatura</option>
+                        <option value="option-3">Festa de casamento</option>
+                        <option value="option-4">Outros</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="privacy fieldset">
+                <h2 class="tittle">Privacidade</h2>
+                <!-- campo e-mail  -->
+                <div class="camp">
+                    <label for="email" class="label__tittle">E-mail do administrador<span class="parenthesis"> (digite um e-mail válido)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Digite o e-mail do administrador de evento..." required>
+                </div>
+                <!-- campo de senha -->
+                <div class="camp">
+                    <label for="senha" class="label__tittle">Senha de acesso para os participantes<span class="parenthesis"> (mínimo 8 caracteres)</span></label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha geral para participantes..." required>
+                </div>
+                <!-- privacidade -->
+                <div class="camp camp__check">
+                    <label for="check" class="privacy__check">Evento privado</label>
+                    <input type="checkbox" id="check" name="check">
+                </div>
+            </fieldset>
+            <fieldset class="dia__hora fieldset">
+                <h2 class="tittle">Dia e hora</h2>
+                <div class="dia__hora__container">
+                <!-- Data -->
+                <div class="camp">
+                    <label for="date" class="label__tittle">Data</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <!-- início -->
+                <div class="camp">
+                    <label for="inicial__hour" class="label__tittle">Das</label>
+                    <input type="time" id="inicial__hour" name="inicial__hour" required>
+                </div>
+                <!-- fim -->
+                <div class="camp">
+                    <label for="final__hour" class="label__tittle">Até</label>
+                    <input type="time" id="final__hour" name="final__hour" required>
+                </div>
+            </div>
+            </fieldset>
+            <div class="btn__container">
+                <button type="submit" class="btn">
+                    Salvar o evento
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --background-header-color: #000000;
+    --background-color: #D9D9D9;
+    --white: #FFFFFF;
+    --blue: #42D3FF;
+    --dark-gray: #4E4958;
+    --light-grey: #C1BCCC;
+}
+
+.header {
+    background-color: var(--background-header-color);
+    justify-content: center;
+    padding: 5em;
+}
+
+.main,
+.header,
+.dia__hora__container,
+.btn__container {
+    display: flex;
+}
+
+.header__container {
+    flex-direction: column;
+    width: 44%;
+}
+
+.header__tittle,
+.header__text,
+.form,
+.camp__select select,
+.btn {
+    font-family: var(--primary-font);
+}
+
+.header__tittle { 
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.header__text {
+    color: var(--blue);
+    width: 20em;
+}
+
+.main {
+    justify-content: center;
+    background-color: var(--background-color);
+    height: 100%;
+}
+
+.form {
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 40%;
+    padding: 2em;
+    margin-bottom: 2em;
+    margin-top: -3em;
+    box-shadow: 5px 10px 10px var(--dark-gray);
+}
+
+.fieldset {
+    padding-bottom: 2em;
+}
+
+.tittle {
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: .8em;
+}
+
+.infos, 
+.privacy, 
+.dia__hora {
+    border: 0;
+}
+
+.camp {
+    padding-bottom: 1em;
+}
+
+.camp input[type="text"],
+.camp input[type="email"],
+.camp input[type="password"],
+.camp textarea,
+.camp input[type="tel"],
+.camp input[type="date"],
+.camp input[type="time"],
+.camp__select select {
+    padding: 0.5em;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    display: block;
+    width: 70%; 
+}
+
+.camp textarea,
+.camp__select select {
+    width: 50%;
+}
+
+.label__tittle {
+    display: block;
+    margin-bottom: 0.2em;
+    color: var(--dark-gray);
+}
+
+.parenthesis {
+    color: var(--light-grey);
+    font-size: .8em;
+}
+
+.camp__check {
+    display: flex;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.privacy__check {
+    margin-right: 10px;
+}
+
+.dia__hora {
+    justify-content: space-between;
+}
+
+.dia__hora .camp {
+    margin-right: 1.5em;
+}
+
+.dia__hora input {
+    color: var(--dark-gray);
+}
+
+.camp input[type="date"],
+.camp input[type="time"] {
+    width: 100%;
+}
+
+.btn__container {
+    justify-content: center;
+}
+
+.btn {
+    padding: .6em;
+    background-color: var(--background-color);
+    border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--light-grey); 
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder,
+select:focus::placeholder {
+  color: transparent;
+}
+
+.btn:hover {
+    color: var(--white);
+    background-color: var(--background-header-color);
+}
+
+/* Estilos para telas maiores que 1024px */
+@media screen and (min-width: 1024px) {
+    .header__container {
+        width: 44%;
+    }
+
+    .form {
+        width: 40%;
+    }
+
+    .camp input[type="text"],
+    .camp input[type="email"],
+    .camp input[type="password"],
+    .camp textarea,
+    .camp input[type="tel"],
+    .camp input[type="date"],
+    .camp input[type="time"],
+    .camp__select select {
+        width: 70%;
+    }
+
+    .camp textarea,
+    .camp__select select {
+        width: 50%;
+    }
+}
+
+/* Estilos para telas menores ou iguais a 1024px */
+@media screen and (max-width: 1024px) {
+    .header__container {
+        width: 80%;
+    }
+
+    .form {
+        width: 70%;
+        justify-content: center;
+    }
+
+    .camp input[type="text"],
+    .camp input[type="email"],
+    .camp input[type="password"],
+    .camp textarea,
+    .camp input[type="tel"],
+    .camp__select select {
+        width: 100%;
+    }
+
+    .camp input[type="date"],
+    .camp input[type="time"] {
+        width: 50%;
+    }
+
+    .camp textarea,
+    .camp__select select {
+        width: 100%;
+    }
+
+    .dia__hora__container {
+        flex-direction: column;
+    }
+}
